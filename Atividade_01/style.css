@@ -1,0 +1,17 @@
+#green
+{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    color: green;
+    border-radius: 50%;
+}
+
+#gray
+{
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    color: gray;
+    border-radius: 50%;
+}
