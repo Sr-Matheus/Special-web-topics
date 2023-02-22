@@ -4,7 +4,7 @@
     margin: auto;
     justify-content: center;
 }
-#green
+.green
 {
     width: 15px;
     height: 15px;
@@ -14,7 +14,7 @@
     border-radius: 50%;
 }
 
-#gray
+.gray
 {
     width: 15px;
     height: 15px;
