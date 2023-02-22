@@ -17,28 +17,30 @@
             </header>
         </div>
 
-    <form action="" id ="Passo-01"> 
-        <div class="container-sm col-sm-6">
-            <div class="card">
-            <div class="card-header">
-                <b>Passo 1: Dados Pessoais</b>
-            </div>
-              <div class="card-body text-center">
-                
-                <div class="form-floating">
-                    <select class="form-select" id="floatingSelect" aria-label="Tipo">
-                        <option selected> </option>
-                        <option value="1">Brasileiro</option>
-                      <option value="2">Colombiano</option>
-                      <option value="3">Peruano</option>
-                    </select>
-                    <label for="floatingSelect">Tipo</label>
-                </div>
+    <form action="">
 
-                <div class="form-floating my-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
-                    <label for="floatingInput">Nome</label>
-                </div>                  
+        <div class="container-sm col-sm-6">
+            
+          <div class="card" id="passo-1">
+              <div class="card-header">
+                  <h4>Passo 1: Dados Pessoais</h4>
+              </div>
+              
+              <div class="card-body text-center">  
+                  <div class="form-floating">
+                      <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                          <option selected> </option>
+                          <option value="1">Brasileiro</option>
+                        <option value="2">Colombiano</option>
+                        <option value="3">Peruano</option>
+                      </select>
+                      <label for="floatingSelect">Tipo</label>
+                  </div>
+
+                  <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Nome</label>
+                  </div>                  
 
                   <div class="form-floating my-3">
                     <select class="form-select" id="floatingSelect" aria-label="Tipo">
@@ -74,29 +76,81 @@
                     <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
                     <label for="floatingInput">Nome do pai</label>
                   </div>
+
                   <div class="form-floating my-3">
                     <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
-                    <label for="floatingInput">Nome da mãe</label>
-                    
-                    
+                    <label for="floatingInput">Nome da mãe</label>                    
                   </div>
               </div>
             </div>
 
-                    <div class="text-center" id="container-progress">
-                        <div id="green"></div>
-                        <div id="gray"></div>
-                        <div id="gray"></div>
-                        <div id="gray"></div>
-                    </div>
-                    
-
-            <div class="d-grid my-4 gap-2">
-                <button class="btn btn-success" type="button">Proximo passo</button>
+            <div class="card" id="passo-2">
+              <div class="card-header">
+                <h4>Passo 2: Dados</h4>
               </div>
+              <div class="card-body text-center">
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">Endereço</label>
+                </div>
+
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">Complemento</label>                    
+                </div>
+
+                <div class="row">
+                  <div class="col-8">
+                    <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Bairro</label>                    
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">CEP</label>                    
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">Cidade</label>                    
+                </div>
+
+                <div class="form-floating my-3">
+                  <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                    <option selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <label for="floatingSelect">Unidade Federativa</label>
+                </div>
+
+              </div>
+            </div>
+
+            <section class="control">
+              <div class="text-center" id="container-progress">
+                <div id ="mark-1" class="green"></div>
+                <div id ="mark-2" class="gray"></div>
+                <div id ="mark-3" class="gray"></div>
+                <div id ="mark-4" class="gray"></div>
+            </div> 
+            
+            <div class="my-3">
+              <button class="btn" type="button" onclick="previous_step()">Passo Anterior</button>  
+              <button class="btn btn-success" type="button" onclick="next_step()">Proximo passo</button>
+            </div>
+
+          </section>
         </div>
+           
     </form>
 
-       
+  <script src="main.js"></script>
 </body>
 </html>
