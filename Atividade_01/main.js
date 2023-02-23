@@ -3,9 +3,10 @@ var current_step = 1;
 
 window.onload = function load() 
 {
-    current_step++;
-    for (let index = current_step; index < number_steps; index++)
+    
+    for (let index = current_step + 1; index <= number_steps; index++)
     {
+        console.log(index);
         document.getElementById("passo-" + index).style.display = "none";
     }
     
@@ -14,14 +15,34 @@ window.onload = function load()
 
 function previous_step()
 {
+    if (current_step > 1) 
+    {
+        document.getElementById("passo-"+ current_step).style.display = "none";
+        document.getElementById("mark-"+current_step).classList.remove('green');
+        document.getElementById("mark-"+current_step).classList.add('gray');
+        current_step--;
 
+        document.getElementById("passo-" + current_step).style.display = "block";
+        document.getElementById("mark-" + current_step).classList.remove('gray');
+        document.getElementById("mark-" + current_step).classList.add('green');
+    }
+    
 }
 
 
 function next_step()
 {
-    document.getElementById("passo-1").style.display = "none";
-    document.getElementById("passo-2").style.display = "block";
-    document.getElementById("mark-2").classList.remove('gray');
-    document.getElementById("mark-2").classList.add('green');
+    if (current_step < number_steps) 
+    {
+        document.getElementById("passo-"+ current_step).style.display = "none";
+        document.getElementById("mark-"+current_step).classList.remove('gray');
+        document.getElementById("mark-"+current_step).classList.add('green');
+        current_step++;
+    
+        document.getElementById("passo-" + current_step).style.display = "block";
+        document.getElementById("mark-" + current_step).classList.remove('gray');
+        document.getElementById("mark-" + current_step).classList.add('green'); 
+    }
+
+    
 }
