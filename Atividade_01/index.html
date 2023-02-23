@@ -86,7 +86,7 @@
 
             <div class="card" id="passo-2">
               <div class="card-header">
-                <h4>Passo 2: Dados</h4>
+                <h4>Passo 2: Localidade</h4>
               </div>
               <div class="card-body text-center">
                 <div class="form-floating my-3">
@@ -133,14 +133,67 @@
               </div>
             </div>
 
-            <section class="control">
+            
+            
+            <div class="card" id="passo-3">
+              <div class="card-header">
+                <h4>Passo 3: Documentação</h4>
+              </div>
+              <div class="card-body text-center">
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">CPF</label>
+                </div>
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">Identidade</label>
+                </div>
+
+                
+                <div class="row">
+                  <div class="col-8">
+                    <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Orgão Emissor</label>                    
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating my-3">
+                      <input type="date" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Data de Emissão</label>                    
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-floating my-3">
+                  <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                    <option selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <label for="floatingSelect">Unidade Federativa</label>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="card" id="passo-4">
+              <div class="card-header">
+                <h4>Passo 4: Contato</h4>
+              </div>
+            </div>
+            
+            <section class="step_indicator">
               <div class="text-center" id="container-progress">
                 <div id ="mark-1" class="green"></div>
                 <div id ="mark-2" class="gray"></div>
                 <div id ="mark-3" class="gray"></div>
                 <div id ="mark-4" class="gray"></div>
-            </div> 
-            
+            </div>
+
             <div class="my-3">
               <button class="btn" type="button" onclick="previous_step()">Passo Anterior</button>  
               <button class="btn btn-success" type="button" onclick="next_step()">Proximo passo</button>
