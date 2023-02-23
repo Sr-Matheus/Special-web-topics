@@ -1,5 +1,5 @@
-.zip
-.rar
+*.zip
+*.rar
 
 # Logs
 logs
