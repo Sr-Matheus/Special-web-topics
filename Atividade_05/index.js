@@ -5,8 +5,23 @@ const path = require('path');
 
 const basePath = path.join(__dirname, 'templates');
 
-app.get('/home', (req,res)=>{
-    res.sendFile(`${basePath}/home.html`);
+app.get('/users/add', (req,res) => {
+    res.sendFile(`${basePath}/users.html`);
+});
+
+app.use(
+    express.urlencoded({
+        extended: true
+    })
+);
+
+
+app.use(express.json());
+
+app.post('/users/save', (req, res) => {
+    const name = req.body.nome;
+    const age = req.body.idade;
+    console.log(`Nome ${name} idade ${age}`);
 });
 
 app.get('/about', (req,res)=>{
@@ -19,5 +34,5 @@ app.get('/', (req,res)=>{
 });
 
 app.listen(port, ()=>{
-    console.log('Server Started');
+    console.log('Servidor Iniciado');
 });
