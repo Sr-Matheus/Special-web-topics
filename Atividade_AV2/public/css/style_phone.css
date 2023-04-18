@@ -1,0 +1,47 @@
+
+#rightHalf 
+{
+    color: white;
+    background-color:#0261af;
+    font-weight:bold;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+
+} 
+
+#logo, #logo-menu
+{
+    fill: white;
+}
+
+#pagina_nao_encontrada
+{
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#pagina_nao_encontrada img
+{
+    width: 100%;
+    margin: 10% 0;
+}
+
+svg 
+{
+    width: 40px;
+    height: 40px;
+}
