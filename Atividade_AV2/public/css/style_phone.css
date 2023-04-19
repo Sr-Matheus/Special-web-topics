@@ -16,6 +16,7 @@
 
 } 
 
+
 #logo, #logo-menu
 {
     fill: white;
@@ -44,4 +45,51 @@ svg
 {
     width: 40px;
     height: 40px;
+}
+
+
+#btn_start
+{
+    border-radius: 10px;
+    margin-top: 10%;
+    padding: 10px;
+    border: none;
+    width: 200px;
+    background-color: white;
+    color: rgb(10, 100, 200);
+}
+
+#btn_start:hover
+{
+    border-radius: 10px;
+    margin-top: 10%;
+    padding: 10px;
+    border: 1px solid white;
+    width: 200px;
+    background-color: rgb(10, 100, 200);
+    color: white;
+}
+
+#edit-link
+{
+    text-decoration: none;
+}
+
+#exclude-link
+{
+    text-decoration: none;
+}
+
+#all-done
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#all-done-img
+{
+    max-width: 300px;
 }

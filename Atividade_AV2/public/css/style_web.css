@@ -7,9 +7,13 @@
         height: 100%;
     }
     
-    #logo
+    #logo, #trash
     {
-        fill: rgb(02, 97, 175);
+        fill: #0261AF;
+    }
+
+    a{
+        text-decoration: none;
     }
 
     #logo-menu
@@ -52,3 +56,48 @@ svg
 }
 
 
+#btn_start
+{
+    border-radius: 10px;
+    margin-top: 10%;
+    padding: 10px;
+    border: none;
+    width: 200px;
+    background-color: rgb(10, 100, 200);
+    color: white;
+}
+
+#btn_start:hover
+{
+    border-radius: 10px;
+    margin-top: 10%;
+    padding: 10px;
+    border: 1px solid  rgb(10, 100, 200);
+    width: 200px;
+    background-color: white;
+    color:  rgb(10, 100, 200);
+}
+
+#edit-link
+{
+    text-decoration: none;
+}
+
+#exclude-link
+{
+    text-decoration: none;
+}
+
+#all-done
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#all-done-img
+{
+    max-width: 350px;
+}
