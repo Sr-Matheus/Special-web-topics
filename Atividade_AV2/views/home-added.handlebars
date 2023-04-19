@@ -1,3 +1,5 @@
+{{{body}}}
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id = "logo-menu" viewBox="0 0 448 512">
     <title>logo-menu</title>
@@ -29,28 +31,19 @@
         <h1 class="pb-2 border-bottom">Para fazer...</h1>
 
         
-            <form action="/" method="post">
+            <form action="/app/add" method="post">
                 <div class="d-inline-flex justify-content-center flex-row p-2 mb-3 w-100">
-                    <input type="text" class="form-control" name="tarefa" id="tarefa" placeholder="Digite sua tarefa aqui..." required>
+                    <input type="text" class="form-control" name="task" id="task" placeholder="Digite sua tarefa aqui..." required>
                     <button type="submit" class="btn btn-success mx-2" >Adicionar</button>
                 </div>
                 
             </form>
 
     </div>
-    
-    <div class="container" id="all-done">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <img class="img-fluid" id="all-done-img" src="all_done.png" alt=""> 
-            <h5>Sem tarefas, para começar adicione uma nova tarefa</h5>
-        </div>
-        
-    </div>
-
 
 
     <div class="container">
-        <table class="table table-striped" hidden>
+        <table class="table table-striped">
           <thead>
             <tr>
             <th scope="col"> </th>
@@ -62,7 +55,7 @@
         <tbody>
             <tr>
             <th scope="row"><input type="checkbox"></th>
-            <td>Mark</td>
+            <td>{{task}}</td>
             <td>Em aberto...</td>
             <td> 
                 <a id="edit-link" class="text-black" href="/">

@@ -8,15 +8,24 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 app.use(express.static('resources'));
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req,res) =>
 {
-    res.render('home');
+    res.render('inicio');
 });
 
 app.get('/app', (req,res) =>
 {
-    res.render('app');
+    res.render('home');
+});
+
+
+app.post('/app/add',(req,res)=>
+{
+    const task = req.body.task;
+    
+    res.render('home-added', { task:task });
 });
 
 app.use(function (req,res){
