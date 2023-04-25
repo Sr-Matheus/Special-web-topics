@@ -3,36 +3,21 @@ const app = express();
 const port = 3000;
 const expbhs = require('express-handlebars');
 const hbs = expbhs.create({partialsDir:["views/patials"]});
+const conn = require('./db/conn');
+const Task = require('./routes/taskRouter');
+const taskModel = require('./model/task');
+const TaskControler = require('./controlers/taskControler');
+
+
 
 app.use(express.static('public'));
+app.use(express.static('views'));
 app.use(express.static('resources'));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.engine('handlebars', expbhs.engine());
 app.set('view engine', 'handlebars');
-
-
-var tasks =
-[
-    
-]; 
-
-app.post('/app/add',(req,res)=>
-{
-    const task = req.body.task;
-    
-    tasks.push({task});
-
-    console.log(tasks); 
-    
-    res.render('home-added', {tasks});
-});
-
-
-
-
-
-
 
 app.get('/', (req,res) =>
 {
@@ -41,18 +26,24 @@ app.get('/', (req,res) =>
 
 app.get('/app', (req,res) =>
 {
-    res.render('home');
+    res.render('home');    
 });
 
-
+app.use('/add', Task)
 
 app.use(function (req,res){
     res.status(404).render('404');
 });
 
+conn
+    .sync()
+    .then(()=>
+    {
+        app.listen(port);
+        console.log('Server Started');
+    })
 
-
-app.listen(port, ()=>
-{
-    console.log('Server Started');
-})
+    .catch((err)=>
+    {
+        console.log(err);
+    });
