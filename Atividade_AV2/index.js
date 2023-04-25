@@ -22,11 +22,6 @@ app.get('/', (req,res) =>
     res.render('login');
 });
 
-app.get('/app', (req,res) =>
-{
-    res.render('home');    
-});
-
 app.use('/app', Task);
 
 app.use(function (req,res){

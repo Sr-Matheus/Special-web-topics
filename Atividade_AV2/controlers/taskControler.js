@@ -1,5 +1,5 @@
 const Task = require('../model/task');
-const taskModel = require('../model/task');
+// const taskModel = require('../model/task');
 
 
 module.exports = class TaskControler
@@ -23,8 +23,11 @@ module.exports = class TaskControler
 
     static async home(req, res)
     {
-        res.render('home', {todos});
+        const tarefas = await Task.findAll({raw: true});
+        res.render('home', {tarefas});
     }
+
+    
     
 
 }
