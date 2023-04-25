@@ -6,7 +6,7 @@ module.exports = class TaskControler
 {
     static newTask(req, res)
     {
-        res.render('add')
+        res.render('home')
     }
 
     static async newTaskSave(req, res)

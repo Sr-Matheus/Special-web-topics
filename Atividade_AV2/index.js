@@ -8,8 +8,6 @@ const Task = require('./routes/taskRouter');
 const taskModel = require('./model/task');
 const TaskControler = require('./controlers/taskControler');
 
-
-
 app.use(express.static('public'));
 app.use(express.static('views'));
 app.use(express.static('resources'));
@@ -21,7 +19,7 @@ app.set('view engine', 'handlebars');
 
 app.get('/', (req,res) =>
 {
-    res.render('inicio');
+    res.render('login');
 });
 
 app.get('/app', (req,res) =>
@@ -29,7 +27,7 @@ app.get('/app', (req,res) =>
     res.render('home');    
 });
 
-app.use('/add', Task)
+app.use('/app', Task);
 
 app.use(function (req,res){
     res.status(404).render('404');
