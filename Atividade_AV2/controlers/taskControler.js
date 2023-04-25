@@ -18,7 +18,7 @@ module.exports = class TaskControler
         }
         await Task.create(tarefa);
 
-        res.redirect('/app/add');
+        res.redirect('/app');
     }
 
     static async home(req, res)

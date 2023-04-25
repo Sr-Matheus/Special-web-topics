@@ -50,6 +50,30 @@
     </div>
   
 
+  {{#each tasks}}
+
+    <div class="container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+            <th scope="col"> </th>
+            <th scope="col">Tarefa</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        
+        <tbody>            
+            {{> tasks}}
+        </tbody>
+    </table>
+    </div>
+
+{{/each}}
+
+
+
+
 </main>
 
 
