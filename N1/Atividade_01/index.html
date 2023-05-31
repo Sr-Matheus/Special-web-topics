@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01 - Cadastro de usuário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        
+        <div class="container py-4">
+            <header class="pb-4 mb-5 border-bottom">
+                <h1>Cadastro de usuário</h1>
+            </header>
+        </div>
+
+    <form action="">
+
+        <div class="container-sm col-sm-6">
+            
+          <div class="card" id="passo-1">
+              <div class="card-header">
+                  <h4>Passo 1: Dados Pessoais</h4>
+              </div>
+              
+              <div class="card-body text-center">  
+                  <div class="form-floating">
+                      <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                          <option selected> </option>
+                          <option value="1">Brasileiro</option>
+                        <option value="2">Colombiano</option>
+                        <option value="3">Peruano</option>
+                      </select>
+                      <label for="floatingSelect">Tipo</label>
+                  </div>
+
+                  <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Nome</label>
+                  </div>                  
+
+                  <div class="form-floating my-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                        <option selected> </option>
+                        <option value="1">Masculino</option>
+                      <option value="2">Feminino</option>
+                    </select>
+                    <label for="floatingSelect">Sexo</label>
+                  </div>
+
+                  <div class="form-floating my-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                      <option selected> </option>
+                      <option value="1">Brasileiro</option>
+                      <option value="2">Colombiano</option>
+                      <option value="3">Peruano</option>
+                    </select>
+                    <label for="floatingSelect">Naturalidade</label>
+                  </div>
+                
+                  <div class="form-floating my-3">
+                    <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                      <option selected> </option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                    <label for="floatingSelect">Escolaridade</label>
+                  </div>
+
+                  <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                    <label for="floatingInput">Nome do pai</label>
+                  </div>
+
+                  <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                    <label for="floatingInput">Nome da mãe</label>                    
+                  </div>
+              </div>
+            </div>
+
+            <div class="card" id="passo-2">
+              <div class="card-header">
+                <h4>Passo 2: Localidade</h4>
+              </div>
+              <div class="card-body text-center">
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">Endereço</label>
+                </div>
+
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">Complemento</label>                    
+                </div>
+
+                <div class="row">
+                  <div class="col-8">
+                    <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Bairro</label>                    
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">CEP</label>                    
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">Cidade</label>                    
+                </div>
+
+                <div class="form-floating my-3">
+                  <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                    <option selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <label for="floatingSelect">Unidade Federativa</label>
+                </div>
+
+              </div>
+            </div>
+           
+            <div class="card" id="passo-3">
+              <div class="card-header">
+                <h4>Passo 3: Documentação</h4>
+              </div>
+              <div class="card-body text-center">
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">CPF</label>
+                </div>
+                <div class="form-floating my-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                  <label for="floatingInput">Identidade</label>
+                </div>
+
+                
+                <div class="row">
+                  <div class="col-8">
+                    <div class="form-floating my-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Orgão Emissor</label>                    
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating my-3">
+                      <input type="date" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Data de Emissão</label>                    
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-floating my-3">
+                  <select class="form-select" id="floatingSelect" aria-label="Tipo">
+                    <option selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <label for="floatingSelect">Unidade Federativa</label>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="card" id="passo-4">
+              <div class="card-header">
+                <h4>Passo 4: Contato</h4>
+              </div>
+              <div class="card-body text-center">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="form-floating my-3">
+                      <input type="number" class="form-control" id="floatingInput" placeholder="Seu nome aqui" max="100">
+                      <label for="floatingInput">DDD</label>                    
+                    </div>
+                  </div>
+                  <div class="col-9">
+                    <div class="form-floating my-3">
+                      <input type="tel" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Telefone</label>                    
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-floating my-3">
+                      <input type="tel" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Celular</label>                    
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-floating my-3">
+                      <input type="tel" class="form-control" id="floatingInput" placeholder="Seu nome aqui">
+                      <label for="floatingInput">Fax</label>                    
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+            <section class="step_indicator">
+              <div class="text-center" id="container-progress">
+                <div id ="mark-1" class="green"></div>
+                <div id ="mark-2" class="gray"></div>
+                <div id ="mark-3" class="gray"></div>
+                <div id ="mark-4" class="gray"></div>
+            </div>
+
+            <div class="my-3 text-center">
+                  <button id="prev" type="button" class="btn btn-outline-secondary btn-lg" onclick="previous_step()">Passo Anterior</button>  
+                  <button id="next"  class="btn btn-success btn-lg" type="button" onclick="next_step()">Proximo passo</button>
+                  <button id="submit"  class="btn btn-success btn-lg" type="submit" onclick="next_step()">Salvar</button>
+              </div>
+            </div>
+
+          </section>
+        </div>
+           
+    </form>
+
+  <script src="main.js"></script>
+</body>
+</html>

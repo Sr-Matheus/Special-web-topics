@@ -1,0 +1,16 @@
+#logo-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.logo-tipo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
