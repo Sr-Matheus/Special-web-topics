@@ -16,9 +16,9 @@ const MyUser = () =>
 
     return (
         <>
-        <div className='container'>
+        <div className='container mt-4'>
 
-            <h2>Usuário</h2>
+            <h2>Usuários</h2>
             <hr/>
 
             <form onSubmit={registerUser}>
