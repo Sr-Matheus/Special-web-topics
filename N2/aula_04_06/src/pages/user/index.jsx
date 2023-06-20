@@ -1,17 +1,38 @@
 import React, {useState} from 'react';
 import { Form, Button, Row, Col } from 'bootstrap-4-react';
+import { db } from '../../services/firebaseConnection';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
 
-const MyUser = () =>
-{
+
+
+
+
+const MyUser = () => {
 
     const[nome, setNome] = useState();
     const[sobrenome, setSobrenome] = useState();
     const[idade, setIdade] = useState();
 
-    function registerUser(e)
-    {
+    async function registerUser(e){
+
         e.preventDefault();
-        alert(nome);
+
+        try{
+            const docRef = await addDoc(collection(db, "react"),{
+                nome:nome,
+                sobrenome:sobrenome,
+                idade:idade
+            })
+
+            setNome('');
+            setSobrenome('');
+            setIdade('');
+            alert('Dados Salvos!');
+
+        }catch (error){
+            console.log(error);
+        }
+        
     }
 
     return (
