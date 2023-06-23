@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import MyNavbar from "./components/nav";
 import Dashboard from "./pages/dashboard";
 import MyUser from "./pages/user";
+import Teste from "./pages/teste";
 
 
 
@@ -15,6 +16,7 @@ const RoutesApp = () =>
                 <Routes>
                     <Route path="/" element={<Dashboard></Dashboard>} ></Route>
                     <Route path="/user" element={<MyUser></MyUser>} ></Route>
+                    <Route path="/teste" element={<Teste></Teste>} ></Route>
                 </Routes>
             </BrowserRouter>
         </>
